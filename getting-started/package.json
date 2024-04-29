@@ -9,8 +9,8 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "watch": "npm run build && node_modules/http-server/bin/http-server dist -p 1234 ",
-    "build": "mkdir -p dist/ && cp index.html dist/ && cp index.js dist/"
+    "watch": "npm run build && http-server dist -p 1234 ",
+    "build": "if not exist dist mkdir dist && copy index.html dist && copy index.js dist"
   },
   "devDependencies": {
     "clang-format": "^1.8.0",
